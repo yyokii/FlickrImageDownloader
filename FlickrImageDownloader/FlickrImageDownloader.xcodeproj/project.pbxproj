@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F574AC0B26B875CB006E18C0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F574AC0A26B875CB006E18C0 /* main.swift */; };
-		F574AC1526B87DE0006E18C0 /* App in Frameworks */ = {isa = PBXBuildFile; productRef = F574AC1426B87DE0006E18C0 /* App */; };
+		F574AC1726B9404C006E18C0 /* ImageDownloader in Frameworks */ = {isa = PBXBuildFile; productRef = F574AC1626B9404C006E18C0 /* ImageDownloader */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F574AC1526B87DE0006E18C0 /* App in Frameworks */,
+				F574AC1726B9404C006E18C0 /* ImageDownloader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +89,7 @@
 			);
 			name = FlickrImageDownloader;
 			packageProductDependencies = (
-				F574AC1426B87DE0006E18C0 /* App */,
+				F574AC1626B9404C006E18C0 /* ImageDownloader */,
 			);
 			productName = FlickrImageDownloader;
 			productReference = F574AC0726B875CB006E18C0 /* FlickrImageDownloader */;
@@ -300,9 +300,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F574AC1426B87DE0006E18C0 /* App */ = {
+		F574AC1626B9404C006E18C0 /* ImageDownloader */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = App;
+			productName = ImageDownloader;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
