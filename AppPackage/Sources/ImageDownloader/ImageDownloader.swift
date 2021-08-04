@@ -43,6 +43,9 @@ public struct ImageDownloaderImpl: ImageDownloader {
                                      keyword: keyword,
                                      perPage: perPage,
                                      page: page)
+        
+        print("Request URL:  \(arrangedURL)")
+        
         return apiClient.request(for: arrangedURL)
             .map { (data: SearchResult) -> [DownloadData]  in
                 return data.photos.photo.compactMap {
