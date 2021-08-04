@@ -26,4 +26,4 @@ Pull requests and issues are always welcome. Please open any issues and PRs for 
 
 ## License
 
-XcodeGen is licensed under the MIT license. See [LICENSE](https://github.com/yyokii/FlickrImageDownloader/blob/main/LICENSE) for more info.
+FlickrImageDownloader is licensed under the MIT license. See [LICENSE](https://github.com/yyokii/FlickrImageDownloader/blob/main/LICENSE) for more info.
