@@ -42,20 +42,25 @@ public struct ImageDownloaderImpl: ImageDownloader {
         
         print("Request URL:  \(arrangedURL)")
         
+        let documentsURL = try!
+            FileManager.default.url(for: .documentDirectory,
+                                    in: .userDomainMask,
+                                    appropriateFor: nil,
+                                    create: false)
+        let now = Date()
+        let saveDir = documentsURL.appendingPathComponent("images_\(keyword)_\(now)")
+        try! FileManager.default.createDirectory(at: saveDir,
+                                            withIntermediateDirectories: false,
+                                            attributes: nil)
+        
         return apiClient.request(for: arrangedURL)
             .map { (data: SearchResult) -> [DownloadData]  in
                 return data.photos.photo.compactMap {
                     if let urlString = $0.urlZ,
                        let url = URL(string: urlString) {
                         let fileName = $0.secret + ".jpg"
-                        #warning("配置場所を動的に設定できるようにする")
-                        let documentsURL = try!
-                            FileManager.default.url(for: .documentDirectory,
-                                                    in: .userDomainMask,
-                                                    appropriateFor: nil,
-                                                    create: false)
                         return .init(
-                            destination: documentsURL.appendingPathComponent(fileName),
+                            destination: saveDir.appendingPathComponent(fileName),
                             fileURL: url,
                             fileName: fileName
                         )
