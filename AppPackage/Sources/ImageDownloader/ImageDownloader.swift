@@ -71,7 +71,6 @@ public struct ImageDownloaderImpl: ImageDownloader {
                             keyword: String,
                             perPage: Int,
                             page: Int) -> URL  {
-        #warning("リクエスト内容のperpageなどを動的に設定できるようにする")
         let queryItems: [URLQueryItem] = [
             .init(queryParam: .method, value: "flickr.photos.search"),
             .init(queryParam: .apiKey, value: apiKey),
