@@ -20,6 +20,17 @@ For example, if you want to search for images of cats...
 
 The downloaded images will be stored in the document directory.
 
+## Develop References
+
+About flickr
+
+* [search API](https://www.flickr.com/services/api/flickr.photos.search.html)
+* [photo image URLs](https://www.flickr.com/services/api/misc.urls.html)
+
+About apple
+
+* [downloading files from web](https://developer.apple.com/documentation/foundation/url_loading_system/downloading_files_from_websites)
+
 ## Contributions
 
 Pull requests and issues are always welcome. Please open any issues and PRs for bugs, features, or documentation.
