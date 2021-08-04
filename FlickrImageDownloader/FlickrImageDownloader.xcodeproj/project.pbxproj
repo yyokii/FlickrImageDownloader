@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F574AC0B26B875CB006E18C0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F574AC0A26B875CB006E18C0 /* main.swift */; };
 		F574AC1726B9404C006E18C0 /* ImageDownloader in Frameworks */ = {isa = PBXBuildFile; productRef = F574AC1626B9404C006E18C0 /* ImageDownloader */; };
+		F574AC1B26BA3562006E18C0 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = F574AC1A26BA3562006E18C0 /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F574AC1B26BA3562006E18C0 /* ArgumentParser in Frameworks */,
 				F574AC1726B9404C006E18C0 /* ImageDownloader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +84,7 @@
 				F574AC0326B875CB006E18C0 /* Sources */,
 				F574AC0426B875CB006E18C0 /* Frameworks */,
 				F574AC0526B875CB006E18C0 /* CopyFiles */,
+				F574AC1C26BA3F3F006E18C0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -90,6 +93,7 @@
 			name = FlickrImageDownloader;
 			packageProductDependencies = (
 				F574AC1626B9404C006E18C0 /* ImageDownloader */,
+				F574AC1A26BA3562006E18C0 /* ArgumentParser */,
 			);
 			productName = FlickrImageDownloader;
 			productReference = F574AC0726B875CB006E18C0 /* FlickrImageDownloader */;
@@ -118,6 +122,9 @@
 				Base,
 			);
 			mainGroup = F574ABFE26B875CB006E18C0;
+			packageReferences = (
+				F574AC1926BA3562006E18C0 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = F574AC0826B875CB006E18C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +133,26 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F574AC1C26BA3F3F006E18C0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp ${BUILT_PRODUCTS_DIR}/FlickrImageDownloader ${PROJECT_DIR}/bin\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F574AC0326B875CB006E18C0 /* Sources */ = {
@@ -299,10 +326,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		F574AC1926BA3562006E18C0 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		F574AC1626B9404C006E18C0 /* ImageDownloader */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ImageDownloader;
+		};
+		F574AC1A26BA3562006E18C0 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F574AC1926BA3562006E18C0 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

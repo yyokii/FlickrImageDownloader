@@ -16,18 +16,14 @@ public protocol ImageDownloader {
     func downloadImages(of keyword: String, perPage: Int, page: Int) -> AnyPublisher<URL, Error>
 }
 
-extension ImageDownloader {
-    public func downloadImages(of keyword: String, perPageOrDefault: Int = 10, pageOrDefault: Int = 1) -> AnyPublisher<URL, Error> {
-        return downloadImages(of: keyword, perPage: perPageOrDefault, page: pageOrDefault)
-    }
-}
-
 public struct ImageDownloaderImpl: ImageDownloader {
-    let apiKey = ""
+    let apiKey: String
     public var apiClient: APIClient = APIClientImpl()
     var url = URL(string: "https://www.flickr.com/services/rest/")!
     
-    public init() {}
+    public init(apiKey: String) {
+        self.apiKey = apiKey
+    }
     
     public func downloadImages(of keyword: String, perPage: Int = 10, page: Int = 1) -> AnyPublisher<URL, Error> {
         fetchDownloadFileData(of: keyword, perPage: perPage, page: page)
