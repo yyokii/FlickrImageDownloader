@@ -2,7 +2,7 @@
 
 FlickrImageDownloader is an image downloader that uses the flickr API. The development language is Swift.
 
-To use it, you need flicker apikey, see [flicker page]((https://www.flickr.com/services/apps/create/apply/)) for creating apikey.
+To use it, you need flicker apikey, see [flicker page](https://www.flickr.com/services/apps/create/apply/) for creating apikey.
 
 ## Installing
 
@@ -27,4 +27,3 @@ Pull requests and issues are always welcome. Please open any issues and PRs for 
 ## License
 
 XcodeGen is licensed under the MIT license. See [LICENSE](https://github.com/yyokii/FlickrImageDownloader/blob/main/LICENSE) for more info.
-
